@@ -1,0 +1,7 @@
+#utilizado para fazer apontamento de uma porta do computador para a porta do docker. Nesse caso vai ser redirecionada a porta 80 do container para a porta 8080 do meu pc
+
+docker run -p 8080:80 nginx 
+
+#detached... n bloqueia o terminal
+docker run -d -p 8080:80 nginx 
+
