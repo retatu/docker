@@ -3,3 +3,6 @@ docker build -t retatu/nginx-com-vim:latest .
 
 #roda o build de um arquivo com nome diferente de "Dockerfile"
 docker build -t retatu/nginx-com-vim:latest -f Dockerfile.ex .
+
+#remove todos os containers, ativos e n ativos
+docker rm $(docker ps -a -q) -f

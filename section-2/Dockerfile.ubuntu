@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+#entrypoint é um comando fixo
+ENTRYPOINT ["echo",  "Hello" ]
+
+#cmd é um comando variável, sendo ele substituido por parâmetros de run, ex: "docker run --rm retatu/ubuntu:latest Matheus", nesse caso n vai printar World, mas sim Matheus
+CMD [ "World" ]
