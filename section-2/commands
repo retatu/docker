@@ -1,0 +1,5 @@
+#vai fazer o build com a tag retatu/nginx-com-vim:latest com o arquivo Docker file "."
+docker build -t retatu/nginx-com-vim:latest .
+
+#roda o build de um arquivo com nome diferente de "Dockerfile"
+docker build -t retatu/nginx-com-vim:latest -f Dockerfile.ex .

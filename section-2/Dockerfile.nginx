@@ -1,0 +1,11 @@
+FROM nginx:latest
+
+#vai criar uma pasta /app e vai me deixar dentro dessa pasta
+WORKDIR /app
+
+#roda um comando
+RUN apt-get update && \
+    apt-get install vim -y
+
+#vai copiar o conteudo da pasta html do diretório e colar dentro de /usr/share/nginx/html
+COPY html/ /usr/share/nginx/html/
