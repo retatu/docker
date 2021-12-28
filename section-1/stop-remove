@@ -1,0 +1,11 @@
+#para o container
+docker stop 5fbbcdb97cb5
+
+#inicia o container parado
+docker start 5fbbcdb97cb5
+
+#remove um container que está parado
+docker rm 5fbbcdb97cb5
+
+#remove o container, msm se estiver rodando
+docker rm 5fbbcdb97cb5 -f
