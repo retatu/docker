@@ -1,7 +1,13 @@
 FROM ubuntu:latest
 
+#variável de ambiente
+ENV NOME_MAQUINA matheus
+
 #entrypoint é um comando fixo
 ENTRYPOINT ["echo",  "Hello" ]
+
+#expoem a porta 80 do container
+EXPOSE 80
 
 #cmd é um comando variável, sendo ele substituido por parâmetros de run, ex: "docker run --rm retatu/ubuntu:latest Matheus", nesse caso n vai printar World, mas sim Matheus
 CMD [ "World" ]
