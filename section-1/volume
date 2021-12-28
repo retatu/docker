@@ -1,0 +1,10 @@
+#os volumes são utilizados para compartilhar informações entre os containers. Se um container alterar algo no volume que está utilizando, e outro container utilizar esse msm volume, as alterações estarão lá.
+
+#cria o volume
+docker volume create meuvolume
+
+#lista informações do volume
+docker volume inspect meuvolume
+
+docker run --name nginx2 -d --mount type=volume,source=meuvolue,target=/app nginx
+docker run --name nginx2 -d -v meuvolue:/app nginx

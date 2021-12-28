@@ -4,6 +4,6 @@ docker exec -it nginx bash
 #aponta o repositório do pc para o repositório do container. Ou seja, oq estiver no pc vai para o container, evitando assim de perder as alterações
 docker run -d --name nginx -p 8080:80 -v ~/Docker/section-1/html/:/usr/share/nginx/html nginx
 
-#mesma coisa que o anterior, mas a diferença é que o mount não cria a pasta caso ela n exista
+#mesma coisa que o anterior, mas a diferença é que o mount não cria a pasta caso ela n exista 
 docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html/,target=/usr/share/nginx/html nginx
 
