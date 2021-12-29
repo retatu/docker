@@ -1,0 +1,2 @@
+apt-get update
+WORKDIR /var/www
