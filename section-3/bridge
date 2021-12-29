@@ -1,0 +1,15 @@
+#uma rede bridge usa uma ponte de software que permite que contêineres conectados à mesma rede bridge 
+#se comuniquem, enquanto fornece isolamento de contêineres que 
+#não estão conectados a essa rede de ponte. O driver de bridge do Docker 
+#instala automaticamente regras na máquina host para que os contêineres 
+#em diferentes redes de ponte não possam se comunicar diretamente entre si.
+
+docker network create --driver bridge redebridge
+
+#ambos containers estão na msm rede e um conhece o outro
+docker run -dit --name ubuntu1 --network redebridge bash
+docker run -dit --name ubuntu2 --network redebridge bash
+
+#vai conectar na redebridge
+docker run -dit --name ubuntu3 bash
+docker network connect redebridge ubuntu3

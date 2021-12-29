@@ -1,0 +1,4 @@
+#nesse caso deveria se juntar a rede do meu computador, e eu poderia acessar o container 
+#diretamente do meu computador, sem precisar fazer qualquer apontamento de porta
+
+docker run --rm -d --name nginx --network host nginx
