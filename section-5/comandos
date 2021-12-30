@@ -1,0 +1,4 @@
+docker network create laranet
+
+docker run -d --rm --name laravel --network laranet retatu/laravel:prod
+docker run -d --rm --name nginx --network laranet -p 8080:80 retatu/nginx:prod
